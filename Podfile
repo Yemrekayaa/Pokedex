@@ -8,7 +8,6 @@ target 'Pokedex' do
   # Pods for Pokedex
   pod 'SDWebImage'
   pod 'JGProgressHUD'
-  pod 'PokemonAPI'
   pod 'SnapKit', '~> 5.0.0'
   pod 'SideMenu'
   pod 'Alamofire'

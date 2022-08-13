@@ -36,6 +36,8 @@ class TypeCollectionViewController: UICollectionViewController {
                 self.pokedexController.typeFilterPokemon = pokes
                 self.searchController.searchBar(self.searchController.searchBar, textDidChange: self.searchController.searchBar.text!)
             }
+        }else{
+            self.pokedexController.typeFilterPokemon = []
         }
     }
     
@@ -65,6 +67,10 @@ class TypeCollectionViewController: UICollectionViewController {
         return true
     }
     
+    override func collectionView(_ collectionView: UICollectionView, didDeselectItemAt indexPath: IndexPath) {
+       selectedTypes = nil
+        searchController.searchBar(searchController.searchBar, textDidChange: searchController.searchBar.text!)
+    }
 }
 
 extension TypeCollectionViewController: UICollectionViewDelegateFlowLayout{

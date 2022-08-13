@@ -164,8 +164,11 @@ extension SearchController: UISearchBarDelegate{
     func searchBar(_ searchBar: UISearchBar, textDidChange searchText: String) {
         guard let searchString = searchBar.text,
               let pokedexController = pokedexController else {return}
-        
+        if(pokedexController.typeFilterPokemon.isEmpty){
+            pokedexController.list = pokedexController.allPokemon
+        }else{
         pokedexController.list = pokedexController.typeFilterPokemon
+        }
         if searchString.count > 1 {
             pokedexController.list = pokedexController.list.filter({ poke in
                 if let name = poke.name?.lowercased(), name.contains(searchString.lowercased()){
