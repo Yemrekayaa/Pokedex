@@ -37,7 +37,7 @@ This app is built with:
 
 |  **Search Pokemon**  |  **Pokemon Detail**  |  
 | ---- | ---- | 
-|  <img src="./readme/search.gif" width="300">  |  <img src="./readme/main.gif" width="300">  |
+|  <img src="./readme/search.gif" width="300">  |  <img src="./readme/pokemons.gif" width="300">  |
 
 
 
